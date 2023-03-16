@@ -17,7 +17,7 @@ function changeColor() {
   refs.body.style.backgroundColor = getRandomHexColor();
 
   timerId = setInterval(() => {
-    color = getRandomHexColor();
+    const color = getRandomHexColor();
     refs.body.style.backgroundColor = color;
   }, 1000);
 }
