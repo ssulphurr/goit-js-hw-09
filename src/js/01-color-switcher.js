@@ -6,6 +6,10 @@ const refs = {
 
 let timerId = null;
 
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+
 function changeColor() {
   refs.startBtn.removeEventListener('click', changeColor);
 
@@ -16,10 +20,6 @@ function changeColor() {
     color = getRandomHexColor();
     refs.body.style.backgroundColor = color;
   }, 1000);
-}
-
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
 function stopChangeColor() {
